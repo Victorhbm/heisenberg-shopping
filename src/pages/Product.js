@@ -34,6 +34,7 @@ export default class Product extends Component {
     const item = {
       ...product,
       qtd: 1,
+      finalPrice: product.price,
     };
 
     addProductInCart(item);
