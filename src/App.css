@@ -15,6 +15,10 @@ header {
   color: white;
 }
 
+body {
+  background-color: #E0E1DD;
+}
+
 .header-content {
   padding: 10px 20px;
   display: flex;
@@ -30,9 +34,22 @@ header {
   margin: 0 auto;
 }
 
-.product-image {
-  height: 400px;
+.product-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.product-image-content {
   margin-right: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+.product-image {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
 }
 
 .product-price {
@@ -77,6 +94,7 @@ header {
   border: 1px solid black;
   border-radius: 5px;
   padding: 10px 20px;
+  background-color: white;
 }
 
 .cart-item-info-container {
@@ -171,4 +189,114 @@ header {
 .link-return {
   color: #131921;
   margin-bottom: 5px;
+}
+
+/* Home Page */
+
+.cat-prod-container {
+  display: flex;
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.categories-container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  border: 1px solid black;
+}
+
+.category-btn {
+  padding: 10px 3px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+}
+
+.category-btn:hover {
+  cursor: pointer;
+  background-color: #131921;
+  color: white;
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.product-img-content {
+  width: 200px;
+  height: 150px;
+  margin: 15px auto;
+}
+
+.card-container {
+  width: 300px;
+  padding: 10px 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.products-search-container {
+  width: 100%;
+}
+
+.search-container {
+  margin: 0 10px;
+}
+
+.search-input {
+  padding: 10px 5px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+}
+
+.search-form {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+}
+
+.search-btn {
+  width: 50px;
+  border: none;
+  background-color: #F08803;
+  border-left: 1px solid black;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.search-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card-product-title {
+  font-size: 18px;
+}
+
+.card-product-price {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #E16C0D;
+  text-weight: bold;
 }

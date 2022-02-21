@@ -90,32 +90,33 @@ export default class Product extends Component {
         ) : (
           <div className="page-container">
             <ReturnButton route="/" />
-            <h2>{title}</h2>
-            <p className="product-price">{this.formatePrice(price)}</p>
-
-            <div className="product-detail-container">
-              <img className="product-image" src={picture} alt={title} />
-              <div>
-                <h3>Detalhes do Produto:</h3>
-                <ul>
-                  {attributes.slice(0, 12).map((att) => (
-                    <li key={att.id} className="product-detail-item">
-                      {`${att.name}: ${att.value_name}`}
-                    </li>
-                  ))}
-                </ul>
+            <div className="product-content">
+              <h2>{title}</h2>
+              <p className="product-price">{this.formatePrice(price)}</p>
+              <div className="product-detail-container">
+                <div className="product-image-content">
+                  <img className="product-image" src={picture} alt={title} />
+                </div>
+                <div>
+                  <h3>Detalhes do Produto:</h3>
+                  <ul>
+                    {attributes.slice(0, 12).map((att) => (
+                      <li key={att.id} className="product-detail-item">
+                        {`${att.name}: ${att.value_name}`}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
+              {freeShipping && <p className="free-shipping">Frete Grátis</p>}
+              <button
+                className="add-to-cart-btn"
+                type="button"
+                onClick={() => this.addToCart(productData)}
+              >
+                Adicionar ao carrinho
+              </button>
             </div>
-
-            {freeShipping && <p className="free-shipping">Frete Grátis</p>}
-
-            <button
-              className="add-to-cart-btn"
-              type="button"
-              onClick={() => this.addToCart(productData)}
-            >
-              Adicionar ao carrinho
-            </button>
           </div>
         )}
       </div>

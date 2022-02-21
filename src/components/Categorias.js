@@ -30,13 +30,14 @@ export default class Categorias extends Component {
     const { categories } = this.state;
 
     return (
-      <aside>
+      <aside className="categories-container">
         {categories.map(({id, name}) => (
           <button
             key={ id }
             id={ id }
             type="button"
             onClick={ () => this.handleClick(id) }
+            className="category-btn"
           >
             { name }
           </button>

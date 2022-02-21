@@ -21,6 +21,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.getCartItems();
+    this.getProducts("MLB1000", 'category');
   }
 
   getCartItems = () => {
@@ -51,10 +52,12 @@ export default class Home extends Component {
     return (
       <div>
         <Header cartQuantity={quantity} />
-        <Search getProducts={this.getProducts} />
-        <main>
+        <main className="cat-prod-container">
           <Categorias getProducts={this.getProducts} />
-          <Products products={products} getCartItems={this.getCartItems} />
+          <div className="products-search-container">
+            <Search getProducts={this.getProducts} />
+            <Products products={products} getCartItems={this.getCartItems} />
+          </div>
         </main>
       </div>
     );

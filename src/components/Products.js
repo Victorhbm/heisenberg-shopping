@@ -19,13 +19,19 @@ export default class Products extends Component {
     const { products } = this.props;
 
     return (
-      <section>
+      <section className="products-container">
         {products.map((product) => (
-          <div key={product.id}>
+          <div key={product.id} className="card-container">
             <Link to={`/product/${product.id}`}>
-              <img src={product.thumbnail} alt={product.title} />
-              <h2>{product.title}</h2>
-              <p>
+              <div className="product-img-content">
+                <img
+                  src={product.thumbnail}
+                  alt={product.title}
+                  className="product-img"
+                />
+              </div>
+              <h2 className="card-product-title">{product.title}</h2>
+              <p className="card-product-price">
                 {product.price.toLocaleString('pt-br', {
                   style: 'currency',
                   currency: 'BRL',
