@@ -7,7 +7,7 @@ export default class CartButton extends Component {
 
     return (
       <div className="cart-button-container">
-        <Link to="/cart">
+        <Link to="/heisenberg-shopping/cart">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
