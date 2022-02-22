@@ -89,7 +89,7 @@ export default class Product extends Component {
           <Loading />
         ) : (
           <div className="page-container">
-            <ReturnButton route="/" />
+            <ReturnButton route="/heisenberg-shopping/" />
             <div className="product-content">
               <h2>{title}</h2>
               <p className="product-price">{this.formatePrice(price)}</p>

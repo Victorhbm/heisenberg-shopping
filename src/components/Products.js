@@ -22,7 +22,7 @@ export default class Products extends Component {
       <section className="products-container">
         {products.map((product) => (
           <div key={product.id} className="card-container">
-            <Link to={`/product/${product.id}`}>
+            <Link to={`/heisenberg-shopping/product/${product.id}`}>
               <div className="product-img-content">
                 <img
                   src={product.thumbnail}

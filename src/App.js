@@ -9,11 +9,11 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route
-          path="/product/:id"
+          path="/heisenberg-shopping/product/:id"
           render={ (props) => <Product { ...props } /> }
         />
-        <Route path="/cart" component={ Cart } />
-        <Route path="/" component={ Home } />
+        <Route path="/heisenberg-shopping/cart" component={ Cart } />
+        <Route path="/heisenberg-shopping/" component={ Home } />
       </Switch>
     </BrowserRouter>
   );

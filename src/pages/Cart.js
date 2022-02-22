@@ -59,7 +59,7 @@ export default class Cart extends Component {
       <div>
         <Header cartQuantity={cartItems.length} />
         <section className="page-container">
-          <ReturnButton route="/" />
+          <ReturnButton route="/heisenberg-shopping/" />
           {shouldRender ? (
             <div>
               {cartItems.map((item) => (
