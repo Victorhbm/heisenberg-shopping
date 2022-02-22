@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/heisenberg-shopping/static/css/main.e6f96205.chunk.css",
+    "main.js": "/heisenberg-shopping/static/js/main.402a2862.chunk.js",
+    "main.js.map": "/heisenberg-shopping/static/js/main.402a2862.chunk.js.map",
+    "runtime-main.js": "/heisenberg-shopping/static/js/runtime-main.d6bbff13.js",
+    "runtime-main.js.map": "/heisenberg-shopping/static/js/runtime-main.d6bbff13.js.map",
+    "static/js/2.1ca1faca.chunk.js": "/heisenberg-shopping/static/js/2.1ca1faca.chunk.js",
+    "static/js/2.1ca1faca.chunk.js.map": "/heisenberg-shopping/static/js/2.1ca1faca.chunk.js.map",
+    "static/js/3.fe63c169.chunk.js": "/heisenberg-shopping/static/js/3.fe63c169.chunk.js",
+    "static/js/3.fe63c169.chunk.js.map": "/heisenberg-shopping/static/js/3.fe63c169.chunk.js.map",
+    "index.html": "/heisenberg-shopping/index.html",
+    "static/css/main.e6f96205.chunk.css.map": "/heisenberg-shopping/static/css/main.e6f96205.chunk.css.map",
+    "static/js/2.1ca1faca.chunk.js.LICENSE.txt": "/heisenberg-shopping/static/js/2.1ca1faca.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d6bbff13.js",
+    "static/js/2.1ca1faca.chunk.js",
+    "static/css/main.e6f96205.chunk.css",
+    "static/js/main.402a2862.chunk.js"
+  ]
+}
