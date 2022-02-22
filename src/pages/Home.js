@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Categorias from '../components/Categorias';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
 import Products from '../components/Products';
 import Search from '../components/Search';
 import { getProductsFromCategory, getProductsFromQuery } from '../services/api';
@@ -14,6 +15,7 @@ export default class Home extends Component {
       products: [],
       cartItems: [],
       quantity: 0,
+      loading: false,
     };
 
     this.getProducts = this.getProducts.bind(this);
@@ -33,6 +35,8 @@ export default class Home extends Component {
   };
 
   async getProducts(search, method) {
+    this.setState({ loading: true });
+
     let products;
     if (method === 'query') {
       products = await getProductsFromQuery(search);
@@ -43,11 +47,12 @@ export default class Home extends Component {
 
     this.setState({
       products,
+      loading: false,
     });
   }
 
   render() {
-    const { products, quantity } = this.state;
+    const { products, quantity, loading } = this.state;
 
     return (
       <div>
@@ -56,7 +61,9 @@ export default class Home extends Component {
           <Categorias getProducts={this.getProducts} />
           <div className="products-search-container">
             <Search getProducts={this.getProducts} />
-            <Products products={products} getCartItems={this.getCartItems} />
+            {loading ? <Loading /> : (
+              <Products products={products} getCartItems={this.getCartItems} />
+            )}
           </div>
         </main>
       </div>
